@@ -7,9 +7,15 @@ class Counters extends Component {
       this.props;
     return (
       <div>
-        <button onClick={onReset} className="btn btn-primary btn-sm m-2">
-          Reset
-        </button>
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-sm-1">
+              <button onClick={onReset} className="btn btn-primary btn-sm m-2">
+                Reset
+              </button>
+            </div>
+          </div>
+        </div>
         {counters.map((counter) => (
           <Counter
             key={counter.id}

@@ -5,7 +5,7 @@ class Counter extends Component {
     return (
       <div>
         {this.props.children}
-        <main className="container">
+        <main className="container-fluid">
           <div className="row">
             <div className="col-sm-2">
               <span className={this.getBadgeClasses()}>
@@ -24,6 +24,7 @@ class Counter extends Component {
               <button
                 onClick={() => this.props.onDecrement(this.props.counter)}
                 className="btn btn-secondary btn-sm m-2"
+                disabled={this.props.counter.value === 0 ? "disabled" : ""}
               >
                 -
               </button>
